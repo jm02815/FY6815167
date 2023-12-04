@@ -15,7 +15,8 @@
    var slideImages= ["Slide1.jpg", "Slide2.jpg", "Slide3.jpg", "Slide4.jpg"];
    var currentSlide = 0;
 
-   function showSlide()  { document.getElemetById('Slide').src= slideImages[currentSlide];
+   function showSlide()  { 
+    document.getElementById('Slide').src= slideImages[currentSlide];
                          }
    function nextSlide() {
     currentSlide= (currentSlide + 1) % slideImages.length;
