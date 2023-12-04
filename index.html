@@ -9,6 +9,46 @@
   <h2 style=”font-family:calibri:”>
    <b>
    Conference paper: Early Cosmology: From Prehistory to the Ancient Greece.</b></h2>
+  <script>
+   // Array of slide image URLs
+   var slideImages= ["Slide1.jpg", "Slide2.jpg", "Slide3.jpg", Slide4.jpg"];
+   var currentSlide = 0;
+
+   function showSlide()  { document.getElemetById('Slide').src= slideImages[currentSlide];
+                         }
+   function nextSlide() {
+    currentSlide= (currentSlide + 1) % slideImages.length;
+    showSlide();
+   }
+   function preSlide() {
+    currentSlide= (currentSlide - 1 + slideImages.length) % slideImages.length;
+    showSlide();
+   }
+   // Function to show a specific slide based on the button clicked
+   function showSlideNumber(slideNumber) {
+    currentSlide = slideNumber - 1;
+    showSlide()
+   }
+   <div id="slide-container>
+    <img id="slide" src="Slide1.jpg" alt="slide 1" style="width:100%; max-width:800px;">
+    
+   <!-- Previous and Next button container -->
+   <div class="button-container">
+    <button class="button" onclick="prevSlide()">Previous</button>
+    <button class="button" onclick="nextSlide()">Next</button>
+   </div>
+
+   <! Slide number buttons container -->
+   <div class="slide-number-container">
+    <button class="button" onclick="showSlideNumber(1)">1</button>
+    <button class="button" onclick="showSlideNumber(2)">2</button>
+    <button class="button" onclick="showSlideNumber(3)">3</button>
+    <button class="button" onclick="showSlideNumber(4)">4</button>
+   </div>
+    
+   
+   
+  </script>
   <!style for tables>
    <style>
       table {
