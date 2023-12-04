@@ -21,7 +21,7 @@
     currentSlide= (currentSlide + 1) % slideImages.length;
     showSlide();
    }
-   function preSlide() {
+   function prevSlide() {
     currentSlide= (currentSlide - 1 + slideImages.length) % slideImages.length;
     showSlide();
    }
@@ -35,7 +35,7 @@
   </script>
  
    <div id="slide-container">
-    <img id="slide" src="Slide1.jpg" alt="slide 1" style="width:100%; max-width:800px;">
+    <img id="slide" src="Slide1.jpg" alt="Slide 1" style="width:100%; max-width:800px;">
     
    <!-- Previous and Next button container -->
    <div class="button-container">
@@ -50,6 +50,41 @@
     <button class="button" onclick="showSlideNumber(3)">3</button>
     <button class="button" onclick="showSlideNumber(4)">4</button>
    </div>
+
+    <style>
+     /* Style to centre the image */
+     #slide-container {
+      text-align: centre;
+     }
+     /* style for the buttons */
+     .button-container {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: -100px; /* Add some margin between the image and buttons */
+     }
+
+     .button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 5px; /* Add some margin between the buttons and the image */
+     }
+     .slide-number-container {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%)
+      margin-bottom: -50px; /* Add some margin between the slide number buttons and the image */
+     }
+    
+     
+    </style>
 
    
     
